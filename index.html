@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>次世代型 欠席連絡フォーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>欠席連絡フォーム</h1>
+    <form id="absence-form">
+        <label for="student-name">学生名:</label>
+        <input type="text" id="student-name" name="studentName" required>
+
+        <label for="class">クラス:</label>
+        <input type="text" id="class" name="class" required>
+
+        <label for="absence-date">欠席日:</label>
+        <input type="date" id="absence-date" name="absenceDate" required>
+
+        <label for="reason">欠席理由:</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+        
+        <button type="button" onclick="activateVoiceRecognition()">音声入力</button>
+        <button type="button" onclick="sendAbsenceNotification()">送信</button>
+    </form>
+    <div id="confirmation" class="hidden">
+        <p>欠席連絡が送信されました！</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
